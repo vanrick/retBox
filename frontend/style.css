@@ -1,7 +1,489 @@
 
-@import 'https://fonts.googleapis.com/css?family=Baloo+Bhaina|Baloo+Tamma|Bitter';
-/*font-family: 'Baloo Bhaina', cursive;
-font-family: 'Baloo Tamma', cursive;
-font-family: 'Bitter', serif;*/
+@import 'https://fonts.googleapis.com/css?family=Press+Start+2P';
+@import 'https://fonts.googleapis.com/css?family=Carter+One';
+/*
+font-family: 'Press Start 2P', cursive;
+font-family: 'Carter One', cursive;
+*/
 
 /*--------------imports and google fonts---------------*/
+/*--------------nav2 start---------------*/
+.nav2 .col-md-6{
+  height: 40vh;
+  width: 50.5vw;
+  /*padding: 5% 0 0 0;*/
+  border: 1px solid black;
+  background: #8bac0f no-repeat;
+	border: 12px dashed #1b1a19;
+  /*background-color: #8bac0f*/
+}
+.nav2 a{
+  text-decoration: none !important;
+
+}
+.nav2 .col-md-offset-5 h1{
+  text-decoration: none !important;
+  color: gold;
+}
+.nav2 h1{
+  font-family: 'Press Start 2P', cursive;
+  color: black;
+  /*padding: 5% 0 0 0;*/
+}
+.nav2 .col-md-offset-5 img{
+ float: right;
+ padding: 0 40.5% 0 0;
+ margin: 0 0 0 0;
+ height: 9vh;
+ width: auto;
+}
+.nav2 .col-md-6{
+  /*width: auto;*/
+  text-align: center;
+  opacity: 0.6; /* css standard */
+  filter: alpha(opacity=60); /* internet explorer */
+}
+.nav2 .col-md-6:hover{
+  opacity: 1; /* css standard */
+  filter: alpha(opacity=100); /* internet explorer */
+}
+.nav2 .col-md-6 h1:hover{
+  color: gold;
+  cursor: pointer;
+  -webkit-transition: color 2s ease-out;
+  -moz-transition: color 2s ease-out;
+  -o-transition: color 2s ease-out;
+  transition: color 2s ease-out;
+}
+.nav2 {
+  background-image  : url('images/dark_days.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+.nav2 .col-md-6 img{
+  height: 8vh;
+  width: auto;
+}
+
+.nav_div {
+  padding: 3% 0 0 0;
+}
+
+/*--------------nav2 end---------------*/
+/*--------------nav start---------------*/
+.nav_logo{
+  height: 8vh;
+  width: auto;
+}
+#nav_body .col-md-12{
+
+}
+#nav_body h1{
+  font-family: 'Press Start 2P', cursive;
+  color: gold;
+}
+#nav_body a{
+  text-decoration: none !important;
+}
+#nav_body h1:hover{
+  color: white;
+  cursor: pointer;
+  -webkit-transition: color 2s ease-out;
+  -moz-transition: color 2s ease-out;
+  -o-transition: color 2s ease-out;
+  transition: color 2s ease-out;
+}
+#nav_body{
+  height: auto;
+  width: 100%;
+  background-color: #011633;
+}
+.navbar-header{
+  border: none;
+}
+nav .navbar-collapse{
+  /*height: 100%;
+  width: 100%;*/
+  border: none;
+  background-color: #011633;
+}
+nav .navbar-header{
+  /*height: 100%;
+  width: 100%;*/
+  border: none;
+  background-color: #011633;
+}
+nav a h4{
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+}
+/*nav a h4:hover{
+  color: gold;
+}*/
+/*ease in out webkits*/
+nav a {
+    -webkit-transition: color 500ms ease-out 1s;
+    -moz-transition: color 500ms ease-out 1s;
+    -o-transition: color 500ms ease-out 1s;
+    transition: color 500ms ease-out 1s;
+}
+nav h4:hover {
+  color: gold;
+  /*border: 2px solid white;*/
+  cursor: pointer;
+  -webkit-transition: color 2s ease-out;
+  -moz-transition: color 2s ease-out;
+  -o-transition: color 2s ease-out;
+  transition: color 2s ease-out;
+}
+/*--------------nav end---------------*/
+/*--------------login start---------------*/
+
+.login_body{
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-image: url('images/gal_hd_wp.jpg');
+}
+.login_div .panel-default {
+    margin: 40% 0 0 0;
+    border-style: none;
+    background-color: #011633;
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+.login_body h4{
+  font-family: 'Carter One', cursive;
+  color: white;
+}
+.login_body a{
+  text-decoration: none !important;
+}
+.login_body h4:hover{
+  font-family: 'Carter One', cursive;
+  color: #8bac0f;
+}
+.login_body .btn-lg:hover{
+  /*font-family: 'Carter One', cursive;*/
+  color: #8bac0f;
+}
+.login_div .panel-default label{
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  font-size: .7em;
+}
+.login_div .panel-heading{
+  border-style: none;
+  background-color: #011633;
+}
+.login_div .form-group .form-control{
+  font-family: 'Carter One', cursive;
+  font-size: 1.2em;
+}
+.login_div .btn{
+  background-color: #EFA969;
+  font-family: 'Press Start 2P', cursive;
+}
+.login_div .panel-default h3{
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  font-size: 1.3em;
+}
+.login_div .panel-default:hover {
+    background-color: #011633;
+    opacity: 1.0;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+/*--------------login end---------------*/
+/*create an account start*/
+
+@import "font-awesome-ie7.min.css";
+/* Space out content a bit */
+.createAcc {
+  height: 100vh;
+  width: auto;
+  background-color: #011633;
+}
+.createAcc .col-lg-12,.well{
+  width: 60vw;
+  margin: 5% 0 0 20%;
+  background-color: #8bac0f;
+}
+.createAcc .col-lg-4{
+  background-color: #8bac0f;
+  text-align: center;
+}
+.createAcc label,input{
+  font-family: 'Carter One', cursive;
+}
+.createAcc .row h1{
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2em;
+}
+.createAcc button{
+  font-family: 'Press Start 2P', cursive;
+  background-color: #011633;
+  font-size: 1em;
+  margin: 0 0 0 2%;
+}
+
+/*create an account end*/
+/*--------------home start---------------*/
+.home_body{
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-image: url('images/gal_hd_wp2.jpg');
+}
+.well{
+  background: rgba(48, 98, 48,0.3);
+  border: none;
+
+}
+.center_prof h3{
+ font-family: 'Press Start 2P', cursive;
+ color: black;
+ font-size: 1.5em;
+}
+.center_prof em{
+ font-family: 'Carter One', cursive;
+ /*font-size: 1.5em;*/
+}
+.center_prof h4{
+ font-family: 'Carter One', cursive;
+ /*font-size: 1.5em;*/
+}
+.span3 em{
+  color: white;
+}
+.span3 h4{
+  color: white;
+  padding: 0 .5% 0 0;
+}
+
+.modal-body table{
+  background-color: #8bac0f;
+  width: 90%;
+  margin: 0 0 0 5%;
+  border-radius: 15px;
+}
+.modal-body  button{
+  border-radius: 15px;
+  background-color: #8bac0f;
+}
+.modal-body  table th{
+  font-family: 'Press Start 2P', cursive;
+  font-size: .9em;
+  font-weight: bold;
+}
+.modal-body  table td{
+  font-family: 'Carter One', cursive;
+}
+.modal-body h1{
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  margin: 0 5% 0 0;
+  font-size: 2em;
+}
+
+/*star rating*/
+
+.rating {
+          overflow: hidden;
+          display: inline-block;
+      }
+      .rating-input {
+          position: absolute;
+          left: 0;
+          top: -50px;
+      }
+      .rating-star {
+          display: block;
+          float: right;
+          width: 16px;
+          height: 16px;
+          background: url('http://kubyshkin.ru/samples/star-rating/star.png') 0 -16px;
+      }
+      .rating-star:hover,
+      .rating-star:hover ~ .rating-star,
+      .rating-input:checked ~ .rating-star {
+          background-position: 0 0;
+      }
+
+
+/*star rating end*/
+/*--------------home end---------------*/
+/*--------------gamerz start---------------*/
+.thumb_pics{
+  height: 30vh;
+  width: auto;
+}
+.all_profs{
+  height: 77vh;
+  width: 70%;
+  margin: 0 0 0 15%;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: scroll;
+}
+.all_profs img, h4{
+  margin: 0 0 0 20%;
+}
+
+.all_profs .col-md-6{
+  height: 40vh;
+  width: 50.5vw;
+  margin: 1% 0 0 15%;
+  border: 1px solid black;
+  background: rgba(139, 172, 15, 0.5) no-repeat;
+	border: 12px dashed #1b1a19;
+  /*background-color: #8bac0f*/
+}
+
+.all_profs .col-md-6:hover{
+  opacity: 1; /* css standard */
+  filter: alpha(opacity=100); /* internet explorer */
+}
+
+.gamerz_body{
+ height: 100vh;
+ width: 100%;
+ background-position: center;
+ background-image: url('images/gal_hd_wp4.jpg');
+}
+
+
+ .gamerz_body h3{
+  font-family: 'Press Start 2P', cursive;
+  font-weight: bold;
+  color: white;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+  padding: 0 0 0 38%;
+}
+
+.all_profs h4{
+  font-family: 'Carter One', cursive;
+  font-weight: bold;
+  color: white;
+  text-shadow:
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+  padding: 0 0 0 9%;
+  font-size: 2em;
+}
+
+
+
+/*--------------gamerz end---------------*/
+/*--------------ind gamerz start---------------*/
+.ind_gamerz{
+  height: 100vh;
+  width: 100%;
+  background-color: #011633;
+}
+
+.ind_gamerz table{
+  background-color: #8bac0f;
+  width: 90%;
+  margin: 0 0 0 5%;
+  border-radius: 15px;
+}
+.ind_gamerz button{
+  border-radius: 15px;
+  background-color: #8bac0f;
+}
+.ind_gamerz table th{
+  font-family: 'Press Start 2P', cursive;
+  font-size: .9em;
+  font-weight: bold;
+}
+.ind_gamerz table td{
+  font-family: 'Carter One', cursive;
+}
+.ind_gamerz h1{
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  margin: 0 5% 0 0;
+  font-size: 2em;
+}
+
+/*start of ind_gamerz tables*/
+
+/*end of ind_gamerz tables*/
+/*--------------ind gamerz end---------------*/
+/*--------------all games start---------------*/
+.all_games{
+  height: 100vh;
+  width: 100%;
+  background-image: url('images/gb_wallpaper.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.all_games .horizontal img{
+  height: 40vh;
+  width: auto;
+}
+.all_games .row .col-md-offset-4 h1{
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  /*padding: 0 10% 0 0;*/
+}
+.horizontal article div{
+  text-align: center;
+  background: rgba(155, 188, 15,0.5);
+  padding-top: 1%;
+  height: 60vh;
+  width: auto;
+}
+.horizontal div:hover{
+  color: white;
+  background: rgba(155, 188, 15,0.3);
+}
+.horizontal h2{
+  font-family: 'Press Start 2P', cursive;
+  color: black;
+}
+.horizontal div:hover{
+  text-shadow: 2px 2px 4px white;
+}
+
+/*horizontal scroll*/
+/*// This container element gives us the scrollbars we want.*/
+div.horizontal {
+    width: 100%;
+    height: 400px;
+    overflow: auto;
+}
+
+/*// table-layout: fixed does a lot of the magic, here. It makes sure that the "table cells" retain the pixel dimensions you want.*/
+.all_games .table {
+    display: table;
+    table-layout: fixed;
+    width: 40vw;
+}
+
+/*// Arranging your content inside the "cells" is as simple as using the vertical-align and text-align properties. Floats work, too.*/
+.all_games article {
+    width: 400px;
+    height: 400px;
+    display: table-cell;
+    background: #B4E5F3;
+    vertical-align: middle;
+    text-align: center;
+}
+
+/*// Some styling for contrast.*/
+.all_games article:nth-child(2n+2)
+{
+    background: #273041;
+}
+/*end horizontal scroll*/
+/*--------------all games end---------------*/

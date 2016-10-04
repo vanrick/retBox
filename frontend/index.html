@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app='personal-site'>
+<html ng-app='retBox'>
 <head>
   <meta charset="utf-8">
   <base href="/">
@@ -9,15 +9,20 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" media="screen" title="no title" charset="utf-8">
   <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="/jquery-flipster-master/src/jquery.flipster.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" charset="utf-8"></script>
+  <!-- <link rel="stylesheet" href="/jquery-flipster-master/dist/jquery.flipster.css" media="screen" title="no title"> -->
   <link rel="stylesheet" href="/style.css"  title="no title" charset="utf-8">
-  <link rel="icon" href="images/real logo.png" media="screen" title="Rick Van">
+  <link rel="icon" href="images/ghost2.png" media="screen" title="retBox">
   <script src="appy.js" charset="utf-8"></script>
   <script src="app.js" charset="utf-8"></script>
-
-
-
-  <script src="controllers.js" charset="utf-8"></script>
+  <script src="directives/directives.js" charset="utf-8"></script>
+  <script src="controllers/nav.js" charset="utf-8"></script>
+  <script src="controllers/allGamers.js" charset="utf-8"></script>
+  <script src="controllers/allRetGames.js" charset="utf-8"></script>
+  <script src="controllers/home.js" charset="utf-8"></script>
+  <script src="controllers/login.js" charset="utf-8"></script>
+  <script src="controllers/playIt.js" charset="utf-8"></script>
   <script src="factory/factory.js" charset="utf-8"></script>
   <title>retBox</title>
 </head>
@@ -25,26 +30,7 @@
 <body>
 
   <div id="wrapper">
-    <div class="overlay"></div>
-
-    <!-- Sidebar -->
-    <nav class="navbar navbar-default" role="navigation">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">retBox</a>
-      </div>
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#games_list">Right</a></li>
-        </ul>
-      </div>
-    </nav>
-    <!-- /#sidebar-wrapper -->
+    <!-- <div class="overlay"></div> -->
 
     <!-- Page Content -->
     <div ng-view></div>
@@ -52,6 +38,6 @@
 
   </div>
   <!-- /#wrapper -->
-
+  <link rel="stylesheet" href="/jquery-flipster-master/dist/jquery.flipster.css" media="screen" title="no title">
 </body>
 </html>

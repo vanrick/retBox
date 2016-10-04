@@ -1,328 +1,165 @@
-<div id="wrapper" class='first_body' a name = 'home1'>
-  <div id="page-1"></div>
-  <div class='col-lg-8 col-lg-offset-2'>
-    <div class="page-header row">
-        <img class='logo col-md-4 col-sm-4 col-xs-4 col-md-offset-4' src="images/real logo.png" alt="" />
-        <h1  class="yellow col-md-4">rick van</h1>
-        <h3 class="yellow col-md-6 col-md-offset-4">front end web developer / technology geek</h3>
-    </div>
+<div id='wrapper'class="home_body">
+  <nav-bar></nav-bar>
+  <div class="container">
+      <div class="row">
+  <br>
+  <br>
+      	<div class="span3 well">
+          <div class="center_prof">
+            <center>
+              <a href=".modal" data-toggle="modal"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R" name="aboutme" width="140" height="140" class="img-circle"></a>
+              <h3>4ttackt1c</h3>
+              <em>Do. Or do not. There is no try.</em>
+              <h4>Click my face for a list of games</h4>
+              <!-- <p>By the way,<br><a target="_blank" href="http://bootsnipp.com/TXTCLASS/snippets/25zz">there's a fresh 3.1.0 version ready</a></p> -->
+            </center>
 
-    <div class="row">
-     <div class="contact_info col-md-4">
-       <br>
-       <div id='' class="col-md-4 col-sm-12 logoStash">
-        <img src="images/dsc.JPG" class="img-rounded img-responsive" alt="Cinque Terre">
-       </div>
-       <div id='p_contact' class="col-md-4 contactText clickable_icons">
-        <a href="mailto:xrickvan@gmail.com"><p><img class='small' src="images/131155.png" alt="" /> xrickvan@gmail.com </p></a>
-        <a href='#'><p><img class='small' src="images/117959.png" alt="" /> rickvan.tech </p></a>
-        <a href="https://www.linkedin.com/in/vanrick" target="_blank">
-          <p><img class='small' src="images/37368.png" alt="" /> /in/vanrick </p></a>
-        <a href="https://github.com/vanrick" target="_blank"><p><img class='small' src="images/github.png" alt="" /> /vanrick </p></a>
-        <a href='tel:13039311881' target="_blank"><p><img class='small' src="images/181825.png" alt="" /> 303.931.1881 </p></a>
-        <a href='https://www.google.com/maps/place/Denver,+CO/@39.7645187,-104.9951976,11z/data=!3m1!4b1!4m5!3m4!1s0x876b80aa231f17cf:0x118ef4f8278a36d6!8m2!3d39.7392358!4d-104.990251'
-        target="_blank"><p><img class='small' src="images/location.svg" alt="" /> Denver CO </p></a>
-        <!-- <div class="clickable_icons">
-          <a href="https://github.com/vanrick" target="_blank"><img class='small' src="images/gold-github-512.png" alt="" /></a>
-          <a href="#" target="_blank"><img class='small' src="images/icon-facebook.png" alt="" /></a>
-          <a href="https://www.linkedin.com/in/vanrick
-          " target="_blank"><img class='small' src="images/logo.svg" alt="" /></a>
-          <a href="mailto:xrickvan@gmail.com
-          "><img class='small' src="images/mail.png" alt="" /></a>
-        </div> -->
-       </div>
-     </div>
-    </div>
+          </div>
+
+          <div class="modal fade" id="myModal">
+          <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h3 class="modal-title">GAME LIST</h3>
+                  </div>
+                  <div class="modal-body">
+          		  <h5 class="text-center">Pwn</h5>
+                    <table class="table table-striped" id="tblGrid">
+                      <thead id="tblHead">
+                        <tr>
+                          <th>Console</th>
+                          <th>Game title</th>
+                          <th class="text-right">Rating</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>NES</td>
+                          <td>
+                           Zelda
+                          </td>
+                          <td class="text-right">
+                            <!-- start of star rating -->
+
+                            <span class="rating">
+                              <input type="radio" class="rating-input"
+                              id="rating-input-1-5" name="rating-input-1">
+                              <label for="rating-input-1-5" class="rating-star"></label>
+                              <input type="radio" class="rating-input"
+                              id="rating-input-1-4" name="rating-input-1">
+                              <label for="rating-input-1-4" class="rating-star"></label>
+                              <input type="radio" class="rating-input"
+                              id="rating-input-1-3" name="rating-input-1">
+                              <label for="rating-input-1-3" class="rating-star"></label>
+                              <input type="radio" class="rating-input"
+                              id="rating-input-1-2" name="rating-input-1">
+                              <label for="rating-input-1-2" class="rating-star"></label>
+                              <input type="radio" class="rating-input"
+                              id="rating-input-1-1" name="rating-input-1">
+                              <label for="rating-input-1-1" class="rating-star"></label>
+                            </span>
+
+                            <!-- end of star rating -->
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>SNES</td>
+                          <td>Metroid</td>
+                          <td class="text-right">
+
+                            <!-- start of star rating -->
+
+                            <span class="rating">
+                              <input type="radio" class="rating-input"
+                              id="rating-input-1-5" name="rating-input-1">
+                              <label for="rating-input-1-5" class="rating-star"></label>
+                              <input type="radio" class="rating-input"
+                              id="rating-input-1-4" name="rating-input-1">
+                              <label for="rating-input-1-4" class="rating-star"></label>
+                              <input type="radio" class="rating-input"
+                              id="rating-input-1-3" name="rating-input-1">
+                              <label for="rating-input-1-3" class="rating-star"></label>
+                              <input type="radio" class="rating-input"
+                              id="rating-input-1-2" name="rating-input-1">
+                              <label for="rating-input-1-2" class="rating-star"></label>
+                              <input type="radio" class="rating-input"
+                              id="rating-input-1-1" name="rating-input-1">
+                              <label for="rating-input-1-1" class="rating-star"></label>
+                            </span>
+
+                            <!-- end of star rating -->
+
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>N64</td>
+                          <td>Mario Kart</td>
+                          <td class="text-right">
+                            <!-- start of star rating -->
+
+                            <span class="rating">
+                              <input type="radio" class="rating-input"
+                              id="rating-input-1-5" name="rating-input-1">
+                              <label for="rating-input-1-5" class="rating-star"></label>
+                              <input type="radio" class="rating-input"
+                              id="rating-input-1-4" name="rating-input-1">
+                              <label for="rating-input-1-4" class="rating-star"></label>
+                              <input type="radio" class="rating-input"
+                              id="rating-input-1-3" name="rating-input-1">
+                              <label for="rating-input-1-3" class="rating-star"></label>
+                              <input type="radio" class="rating-input"
+                              id="rating-input-1-2" name="rating-input-1">
+                              <label for="rating-input-1-2" class="rating-star"></label>
+                              <input type="radio" class="rating-input"
+                              id="rating-input-1-1" name="rating-input-1">
+                              <label for="rating-input-1-1" class="rating-star"></label>
+                            </span>
+
+                            <!-- end of star rating -->
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="form-group">
+                      <input type="button" class="btn btn-warning btn-sm pull-right" value="Edit">
+                      <div class="clearfix"></div>
+                    </div>
+          		</div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default " data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save Changes</button>
+                  </div>
+
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+        <!-- start of star rating -->
+
+        <!-- <span class="rating">
+          <input type="radio" class="rating-input"
+          id="rating-input-1-5" name="rating-input-1">
+          <label for="rating-input-1-5" class="rating-star"></label>
+          <input type="radio" class="rating-input"
+          id="rating-input-1-4" name="rating-input-1">
+          <label for="rating-input-1-4" class="rating-star"></label>
+          <input type="radio" class="rating-input"
+          id="rating-input-1-3" name="rating-input-1">
+          <label for="rating-input-1-3" class="rating-star"></label>
+          <input type="radio" class="rating-input"
+          id="rating-input-1-2" name="rating-input-1">
+          <label for="rating-input-1-2" class="rating-star"></label>
+          <input type="radio" class="rating-input"
+          id="rating-input-1-1" name="rating-input-1">
+          <label for="rating-input-1-1" class="rating-star"></label>
+        </span> -->
+
+        <!-- end of star rating -->
+
   </div>
-</div>
-
-<div id="wrapper" class="second_body" >
-<div id="page-2"></div>
-
-<h1 class="col-md-offset-5"><img src="images/about_me.png" alt="" /></h1>
-<div class="container-fluid bg-2 col-md-6 col-md-offset-2">
-  <h2>Hello! I’m Rick Van.</h2>
-    <h4>
-    My experience ranges from every stage of the development progression
-    for dynamic web projects. Presently I work with HTML/CSS, JavaScript,
-    jQuery, and AngularJS on the front end and on the backend Express, Node.js, and PostgreSQL.
-    Recently started intergrating ReactJS framework and Angular 2 as well. I have a lot of experience working
-    in a business office setting and I’ve harvested valuable skills such as communication, leadership, and teamwork.
-    The most important attribute that I have, and the one I use the most, is the ability to teach myself and I have a “better-oneself” mentality.
-  </h4>
-  <a href="images/Rick_Van_Resume.pdf" class='clickable_icons' target="_blank"><button class='btn btn-lg resume_btn'>Download Résumé</button></a>
-</div>
-
-</div>
-
-<div class="third_body" id="wrapper">
-<div id="page-3"></div>
-
-<div class="col-md-offset-1 row">
-  <h1 class='project_title'>My projects <img src="images/myprojects.png" alt="" /></h1>
-</div>
-<div class="horizontal">
-    <div class="table">
-        <article>
-            <h3 class='dark_blue'>Snippetto</h3>
-            <a class='dark_blue' href="https://snippetto-34aee.firebaseapp.com" target="_blank"><p><img class='img-rounded img-responsive' src="images/snipz_walkthrough.gif" alt="" /></p></a>
-            <p class='dark_blue'>Your daily dosage of news, entertainment, and planning.</p>
-            <p class='dark_blue'>Decoupled app w/ AngularJS, Node.js + Express, OAuth, and Bootstrap</p>
-        </article>
-        <!-- Repeat this part as many times as necessary. -->
-        <article>
-            <h3 class='white'>Upscale Nails</h3>
-            <a class='white' href="https://upscale-nails.firebaseapp.com" target="_blank"><p><img class='img-rounded img-responsive' src="images/upscale_walkthru.gif" alt="" /></p></a>
-            <p class='white'>A small business React.js app that helps owners manage appointments.</p>
-            <p class='white'>React.js, Node.js, Ruby, HTML5/CSS3</p>
-        </article>
-        <article>
-            <h3 class='dark_blue'>Bacon and more Bacon</h3>
-            <a class='dark_blue' href="https://bacon-and-more-bacon.firebaseapp.com/" target="_blank"><p><img class='img-rounded img-responsive' src="images/bacon_walkthru.gif" alt="" /></p></a>
-            <p class='dark_blue'>Love Bacon? Come shop at our bacon store. Add your favorite bacon to your shopping bag! </p>
-            <p class='dark_blue'>AngularJS, Bootstrap, Node.js, HTML5/CSS3</p>
-        </article>
-        <article>
-            <h3 class='white'>Fantasy Football Lineup</h3>
-            <a class='white' href="https://fantasy-football-lineup.firebaseapp.com/" target="_blank"><p><img class='img-rounded img-responsive' src="images/fant_foot_walkthru.gif" alt="" /></p></a>
-            <p class='white'>Fix, create, leave comments and rate your favorite NFL Fantasy lineup!</p>
-            <p class='white'>AngularJS, Bootstrap, Node.js</p>
-        </article>
-        <article>
-            <h3 class='dark_blue'>Pokemon Gotta Catch em All</h3>
-            <a class='dark_blue' href="https://murmuring-retreat-97239.herokuapp.com/" target="_blank"><p><img class='img-rounded img-responsive' src="images/pokemon_walkthru.gif" alt="" /></p></a>
-            <p class='dark_blue'>Match up Pokemon to Trainers, create and battle. May be best Pokemon win!</p>
-            <p class='dark_blue'>Node.js + Express and Bootstrap, HTML5/CSS3</p>
-        </article>
-    </div>
-</div>
-</div>
-
-<div id="wrapper" class="fourth_body">
-<div id="page-4"></div>
-<div class="col-md-offset-8 yellow">
-  <h1><img src="images/grad.png" alt="" />Education</h1>
-
-</div>
-<div class="college col-md-4">
-  <h2>Community College of Denver</h2>
-  <p>
-    General studies, focused on radiology and computer engineering.
-  </p>
-  <h4>2006</h4>
-</div>
-<div class="college2 col-md-4">
-  <h2>Metropolitan State University of Denver</h2>
-  <p>
-   Worked full time to help family pay bills while taking on full class schedule & graduated
-   with a Bachelors of Science in Business Management.
-  </p>
-  <h4>2011</h4>
-</div>
-<div class="clickable_icons ">
-  <div class="college3 col-md-4">
-    <a href='http://www.galvanize.com/' target="_blank"><h2>Galvanize</h2></a>
-    <p>
-      Web development immersive program with 1000+ hours of coursework
-      focused on the latest web technologies, Test Driven Development, and
-      agile methods.
-    </p>
-    <h4>2016</h4>
+  </div>
+  </div>
   </div>
 
-</div>
-</div>
-
-<div id="wrapper" class="fifth_body">
-<div id="page-5"></div>
-
-<div class="row">
-  <div class="col-md-offset-1">
-    <h1 class='project_title'>Skills<img src="images/coding.png" alt=""/></h1>
-  </div>
-<!-- <div class="skillz col-md-4">
-
-
-</div> -->
-
-<div class="skillz-box col-lg-8 col-md-offset-3">
-
-  <!-- <h1>jQuery & CSS3 Skills Bar</h1> -->
-
-  <div class="skillbar clearfix " data-percent="85%">
-  	<div class="skillbar-title" style="background: #d35400;"><span>HTML5/CSS3</span></div>
-  	<div class="skillbar-bar" style="background: #e67e22;"></div>
-  	<div class="skill-bar-percent">85%</div>
-  </div> <!-- End Skill Bar -->
-
-  <div class="skillbar clearfix " data-percent="75%">
-  	<div class="skillbar-title" style="background: #2980b9;"><span>JavaScript</span></div>
-  	<div class="skillbar-bar" style="background: #3498db;"></div>
-  	<div class="skill-bar-percent">75%</div>
-  </div> <!-- End Skill Bar -->
-
-  <div class="skillbar clearfix " data-percent="65%">
-  	<div class="skillbar-title" style="background: #2c3e50;"><span>jQuery</span></div>
-  	<div class="skillbar-bar" style="background: #2c3e50;"></div>
-  	<div class="skill-bar-percent">65%</div>
-  </div> <!-- End Skill Bar -->
-
-  <div class="skillbar clearfix " data-percent="75%">
-  	<div class="skillbar-title" style="background: #46465e;"><span>Node.js+Express</span></div>
-  	<div class="skillbar-bar" style="background: #5a68a5;"></div>
-  	<div class="skill-bar-percent">75%</div>
-  </div> <!-- End Skill Bar -->
-
-  <div class="skillbar clearfix " data-percent="75%">
-  	<div class="skillbar-title" style="background: #333333;"><span>AngularJS</span></div>
-  	<div class="skillbar-bar" style="background: #525252;"></div>
-  	<div class="skill-bar-percent">75%</div>
-  </div> <!-- End Skill Bar -->
-
-  <div class="skillbar clearfix " data-percent="60%">
-  	<div class="skillbar-title" style="background: #27ae60;"><span>PostgreSQL</span></div>
-  	<div class="skillbar-bar" style="background: #2ecc71;"></div>
-  	<div class="skill-bar-percent">60%</div>
-  </div> <!-- End Skill Bar -->
-
-  <div class="skillbar clearfix " data-percent="70%">
-  	<div class="skillbar-title" style="background: #124e8c;"><span>Mocha/Chai</span></div>
-  	<div class="skillbar-bar" style="background: #4288d0;"></div>
-  	<div class="skill-bar-percent">70%</div>
-  </div><!-- End Skill Bar -->
-
-  <div class="skillbar clearfix " data-percent="75%">
-    <div class="skillbar-title" style="background: #00c3e6;"><span>Bootstrap,Materialize</span></div>
-    <div class="skillbar-bar" style="background: #4288d0;"></div>
-    <div class="skill-bar-percent">75%</div>
-  </div> <!-- End Skill Bar -->
-
-  <div class="skillbar clearfix " data-percent="80%">
-    <div class="skillbar-title" style="background: #66cdaa;"><span>Git+Github</span></div>
-    <div class="skillbar-bar" style="background: #96cab4;"></div>
-    <div class="skill-bar-percent">80%</div>
-  </div> <!-- End Skill Bar -->
-
-  <div class="skillbar clearfix " data-percent="70%">
-    <div class="skillbar-title" style="background: #6b8e23;"><span>CLI/UNIX</span></div>
-    <div class="skillbar-bar" style="background: #bad877;"></div>
-    <div class="skill-bar-percent">70%</div>
-  </div> <!-- End Skill Bar -->
-
-  <div class="skillbar clearfix " data-percent="60%">
-    <div class="skillbar-title" style="background: #D5AD45;"><span>React.js</span></div>
-    <div class="skillbar-bar" style="background: #D3A840;"></div>
-    <div class="skill-bar-percent">60%</div>
-  </div> <!-- End Skill Bar -->
-
-  <div class="skillbar clearfix " data-percent="80%">
-    <div class="skillbar-title" style="background: #544596;"><span>Heroku,Firebase</span></div>
-    <div class="skillbar-bar" style="background: #c7a0d2;"></div>
-    <div class="skill-bar-percent">80%</div>
-  </div> <!-- End Skill Bar -->
-
-  <div class="skillbar clearfix " data-percent="75%">
-    <div class="skillbar-title" style="background: #21040a;"><span>Knex.js</span></div>
-    <div class="skillbar-bar" style="background: #dbdbdb;"></div>
-    <div class="skill-bar-percent">75%</div>
-  </div> <!-- End Skill Bar -->
-
-</div>
-</div>
-</div>
-
-<div id="wrapper" class="sixth_body">
-<div id="page-6"></div>
-<div id="row">
-    <div id='down' class="col-md-4">
-      <h1 class="">Interests <img src="images/interests.png" alt="" /></h1>
-      <h4>
-        <p>
-          Outside of the development field, I'm a very outgoing guy. I like to play basketball, go to church and
-          read up on the newest gadgets. I bleed orange and blue - I’m a very big Denver Broncos fan. Every day I feel very blessed
-          to have a chance to potentially do what I love. A lot of people don’t have this type of opportunity,
-          therefore I treat everyday like it's a gift and make sure I
-          stay postive and help whomever I can. I love sports, especially the life lessons
-          that sports can convey. Adversity, naysayers, and mistakes will happen in sports, as they do in life.
-          How you learn and grow from them will set you apart. As long as we
-          stay positive I believe we can achieve anything.
-        </p>
-      </h4>
-    </div>
-  <div id='down2' class="col-md-4">
-    <h1 class="">Experience <img src="images/experience.png" alt="" /></h1>
-    <h3>
-      Operations Manager at Sun Nails
-    </h3>
-    <h4>
-      <p>Upkeep financial structure of spa including deposits, payroll, and budgets</p>
-      <p>Source high-end and trending supplies for spa inventory</p>
-    </h4>
-    <h3>
-      US Bank Personal Banker
-    </h3>
-    <h4>
-      <p>Exceeding sales and customer service performance score card goals every month including ranking in the top 10% of all bankers across all US Bank sites</p>
-      <p>Accountable for building a new 70+ product pipeline every month</p>
-    </h4>
-  </div>
-</div>
-</div>
-
-<div id="wrapper" class="seventh_body">
-<div id="page-7"></div>
-<div class="col-md-offset-1 row">
-  <h1 class='project_title'>Testimonials<img src="images/thumbs_up.png" alt="" /></h1>
-</div>
-<div class="horizontal">
-    <div class="table">
-        <article>
-          <a href='' target="_blank"><h3>Vince</h3>
-          <img src="https://placekitten.com/g/200/200" alt="..." class="img-circle"></a>
-            <u><h4>Web Designer/Front End Dev</h4></u>
-              <h5 id='prof-font'>
-                My experience ranges from every stages of the development progression
-                for dynamic web projects. Presently I work with a lot of HTML/CSS, JavaScript,
-                jQuery, and AngularJS on the front end of development.
-              </h5>
-        </article>
-        <article>
-            <a href='' target="_blank"><h3>Sarah</h3>
-            <img src="https://placekitten.com/g/200/200" alt="..." class="img-circle"></a>
-            <u><h4>Web Designer/Front End Dev</h4></u>
-              <h5 id='prof-font'>
-                My experience ranges from every stages of the development progression
-                for dynamic web projects. Presently I work with a lot of HTML/CSS, JavaScript,
-                jQuery, and AngularJS on the front end of development.
-              </h5>
-        </article>
-        <article>
-            <a href='' target="_blank"><h3>Moose Mike</h3>
-            <img src="https://placekitten.com/g/200/200" alt="..." class="img-circle"></a>
-            <u><h4>Web Designer/Front End Dev</h4></u>
-              <h5 id='prof-font'>
-                My experience ranges from every stages of the development progression
-                for dynamic web projects. Presently I work with a lot of HTML/CSS, JavaScript,
-                jQuery, and AngularJS on the front end of development.
-              </h5>
-        </article>
-        <article>
-            <a href='' target="_blank"><h3>Jonathon</h3>
-            <img src="https://placekitten.com/g/200/200" alt="..." class="img-circle"></a>
-            <u><h4>Web Designer/Front End Dev</h4></u>
-              <h5 id='prof-font'>
-                My experience ranges from every stages of the development progression
-                for dynamic web projects. Presently I work with a lot of HTML/CSS, JavaScript,
-                jQuery, and AngularJS on the front end of development.
-              </h5>
-        </article>
-        <article>
-            <h3></h3>
-        </article>
-    </div>
-</div>
-<div class="col-md-offset-5">
-  <a href="mailto:xrickvan@gmail.com
-  " class='clickable_icons' target="_blank"><button class='btn btn-lg contact-btn'>Contact me<span class="glyphicon glyphicon-envelope" style="padding-left:10%; padding-right:10%;"></span></button></a>
-</div>
 </div>

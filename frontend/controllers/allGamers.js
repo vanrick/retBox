@@ -1,3 +1,3 @@
-app.controller('HomeController', function($scope, $http, $route, $routeParams) {
+app.controller('AllGamersController', function($scope, $http, $route, $routeParams) {
 
 })
