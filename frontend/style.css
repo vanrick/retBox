@@ -10,8 +10,8 @@ font-family: 'Carter One', cursive;
 /*--------------nav2 start---------------*/
 .nav2 .col-md-6{
   height: 40vh;
-  width: 50.5vw;
-  /*padding: 5% 0 0 0;*/
+  width: 50vw;
+  /*padding: 0 0 0 15%;*/
   border: 1px solid black;
   background: #8bac0f no-repeat;
 	border: 12px dashed #1b1a19;
@@ -32,7 +32,7 @@ font-family: 'Carter One', cursive;
 }
 .nav2 .col-md-offset-5 img{
  float: right;
- padding: 0 40.5% 0 0;
+ padding: 0 38.5% 0 0;
  margin: 0 0 0 0;
  height: 9vh;
  width: auto;
@@ -67,9 +67,9 @@ font-family: 'Carter One', cursive;
   width: auto;
 }
 
-.nav_div {
+/*.nav_div {
   padding: 3% 0 0 0;
-}
+}*/
 
 /*--------------nav2 end---------------*/
 /*--------------nav start---------------*/
@@ -147,6 +147,10 @@ nav h4:hover {
   background-position: center;
   background-image: url('images/gal_hd_wp.jpg');
 }
+.sml_img{
+  height: 10vh;
+  width: auto;
+}
 .login_div .panel-default {
     margin: 40% 0 0 0;
     border-style: none;
@@ -198,7 +202,53 @@ nav h4:hover {
 }
 /*--------------login end---------------*/
 /*create an account start*/
+/*sepia hover effects start*/
+.hover09 ul li a img {
+	-webkit-filter: sepia(100%);
+	filter: sepia(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover09 ul li a:hover img {
+  cursor: pointer;
+	-webkit-filter: sepia(0);
+	filter: sepia(0);
+}
+.hover09 ul li a img:active{
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+/*sepia hover effects end*/
+.createAcc h4{
+  font-family: 'Carter One', cursive;
+  color: darkred;
+}
+.createAcc .col-sm-4 button{
+ background-color: #8BAC0F;
+ border: 1px black solid;
+ min-height: 7vh;
+ width: 12vw;
+ max-height: inherit;
+}
 
+.createAcc .col-sm-4 ul{
+  overflow: scroll;
+  height: 20vh;
+  list-style-type: none;
+  /*text-align: center;*/
+}
+.createAcc .dropdown-menu{
+ margin: 0 0 0 6%;
+}
+.sml_img{
+  height: 10vh;
+  width: auto;
+}
+.option{
+  height: 40vh;
+  width: 18vw;
+
+}
 @import "font-awesome-ie7.min.css";
 /* Space out content a bit */
 .createAcc {
@@ -240,8 +290,10 @@ nav h4:hover {
 .well{
   background: rgba(48, 98, 48,0.3);
   border: none;
-
 }
+/*.home_body .center_prof center{
+  width: 70%;
+}*/
 .center_prof h3{
  font-family: 'Press Start 2P', cursive;
  color: black;
@@ -253,6 +305,7 @@ nav h4:hover {
 }
 .center_prof h4{
  font-family: 'Carter One', cursive;
+ margin: 0 3% 0 0;
  /*font-size: 1.5em;*/
 }
 .span3 em{
@@ -453,6 +506,9 @@ nav h4:hover {
 }
 .horizontal div:hover{
   text-shadow: 2px 2px 4px white;
+}
+.table{
+  padding: 0 0 0 3%;
 }
 
 /*horizontal scroll*/

@@ -1,3 +1,3 @@
-app.controller('HomeController', function($scope, $http, $route, $routeParams) {
+app.controller('PlayController', function($scope, $http, $route, $routeParams, GamesFactory) {
 
 })

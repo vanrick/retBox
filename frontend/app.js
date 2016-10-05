@@ -3,6 +3,10 @@ var app = angular.module("retBox", ['ngRoute']);
 
 app.config(function($routeProvider, $locationProvider) {
     $routeProvider
+      .when('/', {
+        templateUrl: 'views/home.html',
+        controller: 'HomeController'
+      })
       .when('/login', {
         templateUrl: 'views/login.html',
         controller: 'LoginController'
@@ -10,14 +14,6 @@ app.config(function($routeProvider, $locationProvider) {
       .when('/createAcc', {
         templateUrl: 'views/createAcc.html',
         controller: 'CreateAccController'
-      })
-      // .when('/login', {
-      //   templateUrl: 'views/login.html',
-      //   controller: 'LoginController'
-      // })
-      .when('/', {
-        templateUrl: 'views/home.html',
-        controller: 'HomeController'
       })
       .when('/gamerz', {
         templateUrl: 'views/gamerz.html',
@@ -34,6 +30,10 @@ app.config(function($routeProvider, $locationProvider) {
       .when('/nav', {
         templateUrl: 'views/nav2.html',
         controller: 'NavController'
+      })
+      .when('/play', {
+        templateUrl: 'views/playIt.html',
+        controller: 'PlayController'
       })
       .otherwise('/', {
         templateUrl: 'views/home.html',

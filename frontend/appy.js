@@ -25,10 +25,3 @@ $('[type*="radio"]').change(function () {
   var me = $(this);
   log.html(me.attr('value'));
 });
-$(document).ready( function() {
-
-function wait(){
-  $(".coverflow").flipster()
-}
-setTimeout(wait, 2000);
-});
