@@ -162,6 +162,12 @@ nav h4:hover {
   font-family: 'Carter One', cursive;
   color: white;
 }
+.login_body #notfound h3{
+  color: darkred;
+}
+#notfound{
+  color: darkred;
+}
 .login_body a{
   text-decoration: none !important;
 }

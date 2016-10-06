@@ -19,6 +19,35 @@ app.factory('GamesFactory', function ($routeParams, $http) {
             }
           })
        },
+       oneLogin: [],
+        accLogin: function(gt, gpw){
+        var json = {
+          	gamer_tag: gt,
+            gamer_pw: gpw
+        }
+        return $http.post('http://localhost:3000/gamers/login',json).then(function(data){
+          console.log('login factory data: ',data.data);
+          if(data.data == 'PW matches'){
+            return true
+          }else if(data.data == "PW don't match"){
+            return false
+          }else{
+            return 'ACC not found'
+          }
+        })
+      },
+      findOne: function(gt){
+        var target;
+        var name = {gamer_tag: gt}
+        console.log('name: ',name);
+          return $http.post(`http://localhost:3000/gamers/id`,name).then(function(data){
+            console.log('findOne factory data: ',data);
+            target = data
+            console.log('target: ',target);
+          })
+          this.oneLogin.push(target)
+          console.log('oneLogin factory: ', this.oneLogin);
+        },
       gamer_icons:[  'http://findicons.com/files/icons/1700/2d/512/game.png',
                      'http://findicons.com/files/icons/75/i_like_buttons_3a/512/cute_ball_games.png',
                      'https://cdn3.iconfinder.com/data/icons/line/36/ghost-512.png',

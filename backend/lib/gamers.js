@@ -12,5 +12,8 @@ module.exports = {
   },
    accLogin: function(gamerTag){
      return knex.raw(`SELECT * from gamers WHERE gamer_tag = '${gamerTag}'`)
-   }
+   },
+   findOne: function(gamerTag){
+     return knex.raw(`SELECT * from gamers WHERE gamer_tag = '${gamerTag}'`)
+  }
 }
