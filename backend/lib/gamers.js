@@ -15,5 +15,20 @@ module.exports = {
    },
    findOne: function(gamerTag){
      return knex.raw(`SELECT * from gamers WHERE gamer_tag = '${gamerTag}'`)
-  }
+   },
+   all: function(){
+   return knex.raw('SELECT * from gamers')
+   },
+   gamer_games: function(user_id, game_id){
+    return knex.raw(`INSERT into user_games VALUES (default,
+      '${user_games.gamer_id}',
+      '${user_games.game_id}'
+    )`)
+   },
+   destroy: function(id){
+     return knex.raw(`DELETE from gamers WHERE id=${id}`)
+   },
+   destroyGamerInUserGames: function(id){
+     return knex.raw(`DELETE from games WHERE id=${id}`)
+   }
 }

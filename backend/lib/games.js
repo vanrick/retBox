@@ -11,6 +11,10 @@ module.exports = {
   find: function(id){
    return knex.raw(`SELECT * from games WHERE id=${id}`)
   },
+  addUserGames: function(){
+    return knex.raw(``)
+    /// users adding games, along with games comments, ratings, likes
+  },
   // findOne: function(id){
   //  return knex.raw(`SELECT name from trainers WHERE id = (SELECT trainer_id from pokemon WHERE id=${id})`)
   // },
@@ -20,9 +24,13 @@ module.exports = {
   // updateOne: function(id,games){
   //  return knex.raw(`UPDATE games SET console='${games.console}',game_name='${games.game_name}', trainer_id='${games.trainer_id}' WHERE id = ${id}`)
   // },
-  destroy: function(id){
-   return knex.raw(`DELETE from games WHERE id=${id}`)
- },
+  destroyGamerInGamers: function(id){
+   return knex.raw(`DELETE from user_games WHERE id=${id}`)
+  },
+  destroyGamerInLikes: function(id){
+   return knex.raw(`DELETE from likes WHERE gamer_id=${id}`)
+  },
+
  //   updateGym: function(id, pokemon){
  //   return knex.raw(`UPDATE pokemon set in_gym=${pokemon} WHERE id = ${id}`)
  // },
