@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var bookshelf = require("../db/bookshelf");
 var Games = require('../lib/games')
 var Gamers = require('../lib/gamers')
 
@@ -12,7 +13,7 @@ router.post('/', function(req, res, next) {
 })
 
 router.post('/addUserGames', function(req, res, next){
-  
+
 })
 
 

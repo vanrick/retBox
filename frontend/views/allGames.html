@@ -45,38 +45,21 @@
             </div>
             <div class="modal-body">
           <h5 class="text-center">Nintendo</h5>
-              <table class="table table-striped" id="tblGrid">
+              <table class="table table-striped" id="tblGrid" ng-model='nes_games' >
                 <thead id="tblHead">
                   <tr>
                     <th>Game title</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody ng-repeat='post in view.nes' ng-init="gameBtn=false">
                   <tr>
-                    <td>
-                     Zelda
+                    <td >
+                     {{post.game_name}}
                     </td>
                     <td class="text-right">
                       <!-- start of star rating -->
-                    <button type="button" class="btn btn-default " data-dismiss="modal">Add+</button>
-                      <!-- end of star rating -->
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Metroid</td>
-                    <td class="text-right">
-
-                      <!-- start of star rating -->
-                    <button type="button" class="btn btn-default " data-dismiss="modal">Add+</button>
-                      <!-- end of star rating -->
-
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Mario Kart</td>
-                    <td class="text-right">
-                      <!-- start of star rating -->
-                    <button type="button" class="btn btn-default " data-dismiss="modal">Add+</button>
+                    <button ng-click='gameBtn=!gameBtn; view.removeGamerGames(view.userId, post.id)'type="button" ng-show='gameBtn' class="btn btn-default " >Remove-</button>
+                    <button ng-click='gameBtn=!gameBtn; view.addGamerGames(view.userId, post.id)'type="button" ng-show='!gameBtn' class="btn btn-default " >Add+</button>
                       <!-- end of star rating -->
                     </td>
                   </tr>
@@ -88,8 +71,8 @@
               </div>
         </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default " data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save Changes</button>
+              <!-- <button type="button" class="btn btn-default " data-dismiss="modal">Close</button> -->
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Save Changes</button>
             </div>
 
           </div><!-- /.modal-content -->
@@ -113,32 +96,15 @@
                     <th>Game title</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody ng-repeat='post in view.snes' ng-init="gameBtn=false">
                   <tr>
                     <td>
-                     Zelda
+                     {{post.game_name}}
                     </td>
                     <td class="text-right">
                       <!-- start of star rating -->
-                    <button type="button" class="btn btn-default " data-dismiss="modal">Add+</button>
-                      <!-- end of star rating -->
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Metroid</td>
-                    <td class="text-right">
-
-                      <!-- start of star rating -->
-                    <button type="button" class="btn btn-default " data-dismiss="modal">Add+</button>
-                      <!-- end of star rating -->
-
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Mario Kart</td>
-                    <td class="text-right">
-                      <!-- start of star rating -->
-                    <button type="button" class="btn btn-default " data-dismiss="modal">Add+</button>
+                      <button ng-click='gameBtn=!gameBtn; view.removeGamerGames(view.userId, post.id) 'type="button" ng-show='gameBtn' class="btn btn-default " >Remove-</button>
+                      <button ng-click='gameBtn=!gameBtn; view.addGamerGames(view.userId, post.id) 'type="button" ng-show='!gameBtn' class="btn btn-default " >Add+</button>
                       <!-- end of star rating -->
                     </td>
                   </tr>
@@ -150,8 +116,8 @@
               </div>
         </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default " data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save Changes</button>
+              <!-- <button type="button" class="btn btn-default " data-dismiss="modal">Close</button> -->
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Save Changes</button>
             </div>
 
           </div><!-- /.modal-content -->
@@ -175,32 +141,15 @@
                     <th>Game title</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody ng-repeat='post in view.sixtyFour' ng-init="gameBtn=false">
                   <tr>
                     <td>
-                     Zelda
+                     {{post.game_name}}
                     </td>
                     <td class="text-right">
                       <!-- start of star rating -->
-                    <button type="button" class="btn btn-default " data-dismiss="modal">Add+</button>
-                      <!-- end of star rating -->
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Metroid</td>
-                    <td class="text-right">
-
-                      <!-- start of star rating -->
-                    <button type="button" class="btn btn-default " data-dismiss="modal">Add+</button>
-                      <!-- end of star rating -->
-
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Mario Kart</td>
-                    <td class="text-right">
-                      <!-- start of star rating -->
-                    <button type="button" class="btn btn-default " data-dismiss="modal">Add+</button>
+                      <button ng-click='gameBtn=!gameBtn; view.removeGamerGames(view.userId, post.id)'type="button" ng-show='gameBtn' class="btn btn-default " >Remove-</button>
+                      <button ng-click='gameBtn=!gameBtn; view.addGamerGames(view.userId, post.id)'type="button" ng-show='!gameBtn' class="btn btn-default " >Add+</button>
                       <!-- end of star rating -->
                     </td>
                   </tr>
@@ -212,8 +161,8 @@
               </div>
         </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default " data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save Changes</button>
+              <!-- <button type="button" class="btn btn-default " data-dismiss="modal">Close</button> -->
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Save Changes</button>
             </div>
 
           </div><!-- /.modal-content -->

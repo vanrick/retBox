@@ -1,22 +1,24 @@
-<div id='wrapper'class="home_body">
+<div id='wrapper'class="home_body" ng-init="view.getGames()">
   <nav-bar></nav-bar>
   <div class="container">
+    <a href='/login' ng-click='view.deleteAcc(view.gId)'><h4 id='delete_acc'>delete account</h4></a>
       <div class="row">
   <br>
   <br>
+  <!-- ng-click='view.getGames(view.gId)' -->
       	<div class="span3 well">
-          <div class="center_prof">
+          <div class="center_prof" >
             <center>
-              <a href=".modal" data-toggle="modal"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRbezqZpEuwGSvitKy3wrwnth5kysKdRqBW54cAszm_wiutku3R" name="aboutme" width="140" height="140" class="img-circle"></a>
-              <h3>4ttackt1c</h3>
-              <em>Do. Or do not. There is no try.</em>
+              <a href="#myModal1" data-toggle="modal"><img src="{{view.gi}}" name="aboutme" width="140" height="140" class="img-circle"></a>
+              <h3>{{view.gn}}</h3>
+              <em>{{view.gq}}</em>
               <h4>Click my face for a list of games</h4>
               <!-- <p>By the way,<br><a target="_blank" href="http://bootsnipp.com/TXTCLASS/snippets/25zz">there's a fresh 3.1.0 version ready</a></p> -->
             </center>
 
           </div>
 
-          <div class="modal fade" id="myModal">
+          <div class="modal fade" id="myModal1">
           <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
@@ -33,12 +35,10 @@
                           <th class="text-right">Rating</th>
                         </tr>
                       </thead>
-                      <tbody>
+                      <tbody ng-repeat='post in sug'>
                         <tr>
-                          <td>NES</td>
-                          <td>
-                           Zelda
-                          </td>
+                          <td>{{post.console}}</td>
+                          <td>{{post.game_name}}</td>
                           <td class="text-right">
                             <!-- start of star rating -->
 
@@ -63,62 +63,8 @@
                             <!-- end of star rating -->
                           </td>
                         </tr>
-                        <tr>
-                          <td>SNES</td>
-                          <td>Metroid</td>
-                          <td class="text-right">
 
-                            <!-- start of star rating -->
 
-                            <span class="rating">
-                              <input type="radio" class="rating-input"
-                              id="rating-input-1-5" name="rating-input-1">
-                              <label for="rating-input-1-5" class="rating-star"></label>
-                              <input type="radio" class="rating-input"
-                              id="rating-input-1-4" name="rating-input-1">
-                              <label for="rating-input-1-4" class="rating-star"></label>
-                              <input type="radio" class="rating-input"
-                              id="rating-input-1-3" name="rating-input-1">
-                              <label for="rating-input-1-3" class="rating-star"></label>
-                              <input type="radio" class="rating-input"
-                              id="rating-input-1-2" name="rating-input-1">
-                              <label for="rating-input-1-2" class="rating-star"></label>
-                              <input type="radio" class="rating-input"
-                              id="rating-input-1-1" name="rating-input-1">
-                              <label for="rating-input-1-1" class="rating-star"></label>
-                            </span>
-
-                            <!-- end of star rating -->
-
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>N64</td>
-                          <td>Mario Kart</td>
-                          <td class="text-right">
-                            <!-- start of star rating -->
-
-                            <span class="rating">
-                              <input type="radio" class="rating-input"
-                              id="rating-input-1-5" name="rating-input-1">
-                              <label for="rating-input-1-5" class="rating-star"></label>
-                              <input type="radio" class="rating-input"
-                              id="rating-input-1-4" name="rating-input-1">
-                              <label for="rating-input-1-4" class="rating-star"></label>
-                              <input type="radio" class="rating-input"
-                              id="rating-input-1-3" name="rating-input-1">
-                              <label for="rating-input-1-3" class="rating-star"></label>
-                              <input type="radio" class="rating-input"
-                              id="rating-input-1-2" name="rating-input-1">
-                              <label for="rating-input-1-2" class="rating-star"></label>
-                              <input type="radio" class="rating-input"
-                              id="rating-input-1-1" name="rating-input-1">
-                              <label for="rating-input-1-1" class="rating-star"></label>
-                            </span>
-
-                            <!-- end of star rating -->
-                          </td>
-                        </tr>
                       </tbody>
                     </table>
                     <div class="form-group">

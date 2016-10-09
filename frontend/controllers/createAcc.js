@@ -1,4 +1,4 @@
-app.controller('CreateAccController', function($scope, $http, $route, $routeParams, GamesFactory) {
+app.controller('CreateAccController', function($scope, $http, $route, $routeParams, GamesFactory, GamesService) {
   $scope.view = {}
   $scope.view.gameIcons = GamesFactory.gamer_icons
   $scope.isSelected = function(selected){

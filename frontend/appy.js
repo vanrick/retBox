@@ -25,3 +25,10 @@ $('[type*="radio"]').change(function () {
   var me = $(this);
   log.html(me.attr('value'));
 });
+// $(document).ready(function () {
+// $("#myModal1").modal("show").on("shown", function () {
+//     window.setTimeout(function () {
+//         $("#myModal").modal("hide");
+//     }, 2000);
+// });
+// })
