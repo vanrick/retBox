@@ -21,5 +21,17 @@ $scope.view.getGames = function(happy){
 }
 $scope.view.getGames(happy)
 
+$scope.view.findRtg = function(gmrId,gmId,rtg){
+  GamesFactory.findRtg(gmrId,gmId,rtg)
+}
+
+$scope.view.getRtgs = function(happy){
+  GamesFactory.defaultRtg(happy).then(function(data){
+    console.log('defaultRtg in home: ',data.data.rows);
+    $scope.view.rtgs = data.data.rows
+  })
+}
+$scope.view.getRtgs(happy)
+
 
 })

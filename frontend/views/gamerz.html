@@ -6,10 +6,10 @@
 
       <div class="col-md-6" ng-repeat='post in view.allGamers'>
         <div class="col-md-offset-2">
-          <a href='/indGamerz' ng-if="post.gamer_icon == 'undefined' || post.gamer_icon == 'picture'">
+          <a href='/indGamerz' ng-click='view.single(post)' ng-if="post.gamer_icon == 'undefined' || post.gamer_icon == 'picture'">
             <img class='thumb_pics img-circle' src="http://static.fanactu.com/img/galerie/jeux_video/1547/1_mario-sur-tuyau.jpg" alt="" />
           </a>
-          <a href='/indGamerz' ng-if="post.gamer_icon !== 'undefined'">
+          <a href='/indGamerz'ng-click='view.single(post)' ng-if="post.gamer_icon !== 'undefined'">
             <img class='thumb_pics img-circle' src="{{post.gamer_icon}}" alt="" />
           </a>
           <h4>{{post.gamer_tag}}</h4>

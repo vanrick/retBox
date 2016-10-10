@@ -94,10 +94,37 @@ app.factory('GamesFactory', function ($routeParams, $http) {
                      'http://www.freeiconspng.com/uploads/pokeball-icon-14.png',
                      'http://megaicons.net/static/img/icons_sizes/189/462/256/street-fighter-akuma-icon.png'
                    ],
+      singlePost: [],
+      addIndGamers: function(post){
+       this.singlePost = []
+       this.singlePost.push(post)
+      //  console.log("singleLadies: " ,this.singlePost);
+      },
+      findRtg: function(gmrId,gmId,rtg){
+        var json = {
+          gamer_id: gmrId,
+          game_id: gmId,
+          ratings: rtg
+        }
+         console.log('got em!: ',json);
+         return $http.post(`http://localhost:3000/games/gameRtg`,json).then(function(data){
+           console.log('got data!: ', data);
+           return data
+         })
+      },
+      defaultRtg: function(gmrId){
+        var json={
+          gamer_id: gmrId
+        }
+         return $http.post(`http://localhost:3000/games/defaultRtg`,json).then(function(data){
+           console.log('all rtgs for user: ',data);
+           return data
+         })
+      },
       inventory: [],
       addGames: function (games) {
         this.inventory.push(games)
-        console.log('games picked ',this.inventory);
+        // console.log('games picked ',this.inventory);
       },
       addGamesToTable: function(gamer_id, games_id){
         var json={

@@ -22,4 +22,7 @@ console.log('logged in user: ', loggedInUser.data.rows[0]);
   }
 
   $scope.didSelectLanguage()
+ $scope.view.single = function(post){
+    GamesFactory.addIndGamers(post)
+ }
 })

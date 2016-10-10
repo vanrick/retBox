@@ -1,9 +1,9 @@
 <div id="wrapper">
   <div class="ind_gamerz">
     <nav-bar></nav-bar>
-    <a href="/gamerz">
+    <a href="/gamerz" >
       <div class="col-md-offset-1">
-        <h1>Dr4g0n_Slay3r</h1>
+        <h1>{{view.gt}}</h1>
         <br>
       </div>
     </a>
@@ -15,33 +15,25 @@
                 <th>Rating</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody ng-repeat='post in sug'>
+
             <tr>
-                <td>N64</td>
-                <td>Mario Party</td>
-                <td>
-                  star star
-                </td>
-                <td>
-                  <button class=''type="button" name="button">Comment</button>
-                </td>
+              <td>{{post.console}}</td>
+              <td>{{post.game_name}}</td>
+              <td class="text-right">
+                <select ng-model='rtgSelected' >
+                  <option ng-selected='{{rtgs[$index].rating}}' >
+                    {{rtgs[$index].rating}}
+                  </option>
+                </select>
+              </td>
+
+              <td>
+                <button class=''type="button" name="button">Comment</button>
+              </td>
             </tr>
-            <tr>
-                <td>Sega</td>
-                <td>Sonic</td>
-                <td>star star</td>
-                <td>
-                  <button class=''type="button" name="button">Comment</button>
-                </td>
-            </tr>
-            <tr>
-                <td>SNES</td>
-                <td>Mario 4</td>
-                <td>star star</td>
-                <td>
-                  <button class=''type="button" name="button">Comment</button>
-                </td>
-            </tr>
+
+
         </tbody>
     </table>
 
