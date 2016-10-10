@@ -24,7 +24,6 @@ app.factory('GamesFactory', function ($routeParams, $http) {
          return oneLogin;
        },
        getOneObj: function(){
-         console.log('oneUser: ',oneUser);
          return oneUser
        },
        getAllGforOne: function(){
@@ -106,9 +105,7 @@ app.factory('GamesFactory', function ($routeParams, $http) {
           game_id: gmId,
           ratings: rtg
         }
-         console.log('got em!: ',json);
          return $http.post(`http://localhost:3000/games/gameRtg`,json).then(function(data){
-           console.log('got data!: ', data);
            return data
          })
       },
@@ -117,9 +114,60 @@ app.factory('GamesFactory', function ($routeParams, $http) {
           gamer_id: gmrId
         }
          return $http.post(`http://localhost:3000/games/defaultRtg`,json).then(function(data){
-           console.log('all rtgs for user: ',data);
            return data
          })
+      },
+      votes: [
+      {
+          "votes": 0
+      },
+      {
+          "votes": 0
+      },
+      {
+          "votes": 0
+      },
+      {
+          "votes": 0
+      },
+      {
+          "votes": 0
+      },
+      {
+          "votes": 0
+      },
+      {
+          "votes": 0
+      },
+      {
+          "votes": 0
+      },
+      {
+          "votes": 0
+      },
+      {
+          "votes": 0
+      }
+      ],
+      addComments:function(gmrId, gmId,comments){
+        var json={
+          gamer_id: gmrId,
+          game_id: gmId,
+          comments: comments
+        }
+        return $http.post(`http://localhost:3000/gamers/addComments`,json).then(function(data){
+           console.log('adding comments to table factory: ',data);
+        })
+      },
+      showAllComments:function(gmrId, gmId){
+        var json={
+          gamer_id: gmrId,
+          game_id: gmId
+        }
+        return $http.post(`http://localhost:3000/gamers/showAllComments`,json).then(function(data){
+          console.log('show all comments in factory: ', data);
+          return data
+        })
       },
       inventory: [],
       addGames: function (games) {
@@ -132,7 +180,7 @@ app.factory('GamesFactory', function ($routeParams, $http) {
             games_id: games_id
             }
          return $http.post(`http://localhost:3000/gamers/userGames`,json).then(function(data){
-               console.log('factory addToUser: ',data);
+              //  console.log('factory addToUser: ',data);
               //  return data
             })
       },

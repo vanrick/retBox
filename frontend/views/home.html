@@ -39,19 +39,23 @@
                         <tr>
                           <td>{{post.console}}</td>
                           <td>{{post.game_name}}</td>
-                          <div ng-repeat='rtg in view.rtgs' class="">
-                            <!-- <div ng-if='rtg.game_id !== post.id'> -->
-                              <td class="text-right">
-                                <select ng-model='newRtg' class="" name="1" value=''>
+                          <td class="text-right">
+                                <select ng-model='newRtg' value=''>
+                                  <!-- <span ng-if='view.rtgs[$index].game_id = post.id'> -->
+                                  <option ng-if='view.rtgs[$index].game_id = post.id' ng-selected='{{view.rtgs[$index].rating}}' >
+                                  <strong>{{view.rtgs[$index].rating}}</strong>
+                                  </option>
+                                  <!-- </span> -->
+
                                   <option value='1'>1</option>
                                   <option value='2'>2</option>
                                   <option value='3'>3</option>
                                   <option value='4'>4</option>
                                   <option value='5'>5</option>
                                 </select>
-                              </td>
-                            <!-- </div> -->
-                          </div>
+                          </td>
+
+
 
                           <td>
                             <button ng-click='view.findRtg(view.gId,post.id,newRtg)' type="button" class'btn btn-sm' name="button">Save</button>

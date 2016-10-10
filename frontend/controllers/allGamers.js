@@ -25,4 +25,15 @@ console.log('logged in user: ', loggedInUser.data.rows[0]);
  $scope.view.single = function(post){
     GamesFactory.addIndGamers(post)
  }
+
+ $scope.view.showAllComments = function(gmrId, gmId){
+   console.log('got em in IndGamersController: ', gmrId, gmId);
+   GamesFactory.showAllComments(gmrId, gmId).then(function(data){
+     $scope.view.currentGameId = gmId
+     console.log(data);
+     $scope.view.showAllComm = data.data.rows
+     // $scope.view.showAllComm = {}
+   })
+ }
+ 
 })

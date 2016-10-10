@@ -21,26 +21,32 @@ module.exports = {
       '${gamer.gamer_quote}'
            )`)
   },
-   addToLikes: function(gamer_id, games_id){
-     return knex.raw(`INSERT into likes
-       VALUES (default,
-         '${likes.gamer_id}',
-         '${likes.games_id}'
-       )`)
-   },
-   addToRatings: function(gamer_id, games_id){
-     return knex.raw(`INSERT into likes
-       VALUES (default,
-         '${ratings.gamer_id}',
-         '${ratings.games_id}'
-       )`)
-   },
-   addToComments: function(gamer_id, games_id){
-     return knex.raw(`INSERT into likes
-       VALUES (default,
-         '${comments.gamer_id}',
-         '${comments.games_id}'
-       )`)
+  //  addToLikes: function(gamer_id, games_id){
+  //    return knex.raw(`INSERT into likes
+  //      VALUES (default,
+  //        '${likes.gamer_id}',
+  //        '${likes.games_id}'
+  //      )`)
+  //  },
+  //  addToRatings: function(gamer_id, games_id){
+  //    return knex.raw(`INSERT into likes
+  //      VALUES (default,
+  //        '${ratings.gamer_id}',
+  //        '${ratings.games_id}'
+  //      )`)
+  //  },
+  addToComments: function(gamer_id, game_id, comments){
+      return knex.raw(`INSERT into comments
+        VALUES (default,
+          '${gamer_id}',
+          '${game_id}',
+          '${comments}'
+        )`)
+    },
+   showAllComments: function(gamer_id, games_id){
+     return knex.raw(`SELECT * from comments
+       WHERE gamer_id = '${gamer_id}' and game_id='${games_id}'
+       `)
    },
    accLogin: function(gamerTag){
      return knex.raw(`SELECT * from gamers WHERE gamer_tag = '${gamerTag}'`)

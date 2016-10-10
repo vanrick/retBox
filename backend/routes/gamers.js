@@ -59,13 +59,25 @@ router.post('/delete',function(req,res,next){
     Gamers.destroyGamerInUserGames(data.id);
     res.send('delete successfully!')
   })
-  //console.log('data in delete ', data);
 })
 
 router.post('/allGamesForUser',function(req,res,next){
   Gamers.getAllGamesForUser(req.body.gamer_id).then(function(data){
-    console.log('req.body: ', req.body);
-    console.log('all games for one user: ', data);
+    // console.log('req.body: ', req.body);
+    // console.log('all games for one user: ', data);
+    res.send(data)
+  })
+})
+
+router.post('/addComments',function(req,res,next){
+  Gamers.addToComments(req.body.gamer_id,req.body.game_id,req.body.comments).then(function(data){
+    console.log('req.body for comments: ', req.body);
+    res.send('added comments!')
+  })
+})
+router.post('/showAllComments',function(req,res,next){
+  Gamers.showAllComments(req.body.gamer_id,req.body.game_id).then(function(data){
+    console.log('req.body for comments: ', req.body);
     res.send(data)
   })
 })
