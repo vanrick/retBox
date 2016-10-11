@@ -28,25 +28,12 @@
                     <li ng-repeat='icon in view.gameIcons track by $index' ng-class='{active : isSelected(selectPic)}' ng-click='view.showMe(icon)'><a ng-model='selectPic' class='active'><img class='sml_img' ng-src="{{icon}}" alt="" /></a></li>
                   </ul>
                 </div>
-                <!-- <input type="text" placeholder="Place an Image URL here" class="form-control"> -->
-                <!-- <select ng-model='newQuantity' class="option" name="1" value=''>
-                 <option value='http://findicons.com/files/icons/1700/2d/512/game.png'><img src="http://findicons.com/files/icons/1700/2d/512/game.png" alt="" /></option>
-                 <option value='http://findicons.com/files/icons/75/i_like_buttons_3a/512/cute_ball_games.png'>2</option>
-                 <option value='https://cdn3.iconfinder.com/data/icons/line/36/ghost-512.png'>3</option>
-                 <option value='http://www.picturetopeople.org/logos/generator/examples/3d-game-logo-icon-1.jpg'>4</option>
-                 <option value='http://downloadicons.net/sites/default/files/game-controller-icon-62468.png'>5</option>
-                 <option value='http://www.iconarchive.com/download/i27081/ph03nyx/super-mario/Flower-Fire.ico'>6</option>
-                 <option value='http://66.media.tumblr.com/tumblr_lvaj4kSscM1r6ewz4o1_540.png'>7</option>
-                 <option value='https://cdn4.iconfinder.com/data/icons/smashicons-game-flat/60/42_-_The_Triforce_Flat-512.png'>8</option>
-                 <option value='http://www.freeiconspng.com/uploads/pokeball-icon-14.png'>9</option>
-                 <option value='http://megaicons.net/static/img/icons_sizes/189/462/256/street-fighter-akuma-icon.png'>10</option>
-                </select> -->
               </div>
   							<div class="col-sm-6 col-md-offset-2 form-group">
   								<label>Gamer Quote</label>
-  								<input ng-model='gamerQuote'type="text" placeholder="It's a-me, Mario!" class="form-control">
+  								<input ng-model='gamerQuote'type="text" placeholder="It's a-me, Mario!" class="form-control" value="">
   							</div>
-  					<button type="button" ng-show='!existed'ng-click='view.getJson(gamerTag, password, view.picSelected, gamerQuote )' class="btn btn-lg btn-info">Submit</button>
+  					<button type="button" ng-show='!existed' ng-click='view.getJson(gamerTag, password, view.picSelected, gamerQuote )' class="btn btn-lg btn-info">Submit</button>
             <a ng-href='/login'><button type="button" class="btn btn-lg btn-info" ng-show='existed'>Login</button></a>
             <h4 ng-show='existed' class="pull-right">Gamer Tag Already Exist!</h4>
   					</div>

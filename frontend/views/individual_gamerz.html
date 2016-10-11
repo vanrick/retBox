@@ -1,6 +1,6 @@
 <div id="wrapper">
+  <nav-bar></nav-bar>
   <div class="ind_gamerz">
-    <nav-bar></nav-bar>
     <a href="/gamerz" >
       <div class="col-md-offset-1">
         <h1>{{view.gt}}</h1>
@@ -36,7 +36,7 @@
                 <p class='upvotes' ng-class="{'downvotes' : view.vote[$index].votes < 0}">{{view.vote[$index].votes}}</p>
               </td>
               <td>
-                <a ng-click='view.showAllComments(view.gmrId,post.id)' href="#myModal2" data-toggle="modal"><button class=''type="button" name="button">Comment</button></a>
+                <a href="#myModal2" data-toggle="modal"><button ng-click='view.showAllComments(view.gmrId,post.id)' class=''type="button" name="button">Comment</button></a>
               </td>
 
               <div class="modal fade" id="myModal2">
@@ -51,16 +51,7 @@
     <!--        start comment box       -->
                   <div class="detailBox">
                     <div class="actionBox">
-                        <ul class="commentList">
-                            <li>
-                                <div class="commenterImage">
-                                  <img src="http://placekitten.com/50/50" />
-                                </div>
-                                <div class="commentText">
-                                    <p class="">Hello Meow Meow Meow.</p> <span class="date sub-text">on March 5th, 2014</span>
-
-                                </div>
-                            </li>
+                        <ul id='action' class="commentList">
                             <li>
                                 <div class="commenterImage">
                                   <img src="http://placekitten.com/45/45" />
@@ -81,10 +72,11 @@
                             </li>
                             <li ng-repeat = 'obj in view.showAllComm'>
                               <div class="commenterImage">
-                                <img src="{{view.gmrIcn}}" />
+                                <img src="{{view.gi}}" />
                               </div>
                               <div class="commentText">
-                                  <p class="">{{obj.comments}}</p> <span class="date sub-text">on October 13th, 2016</span>
+                                  <p class="">{{obj.comments}}</p> <span class="date sub-text">on {{date | date:'MMMM-dd-yyyy'}}
+                                  </span>
                               </div>
                             </li>
                         </ul>
@@ -93,7 +85,7 @@
                                 <input ng-model='comments'class="form-control" type="text" placeholder="Your comments" />
                             </div>
                             <div class="form-group">
-                                <button ng-click='view.addComments(view.gmrId,view.currentGameId,comments); view.showAllComments(view.gmrId,view.currentGameId) 'class="btn btn-default">Add</button>
+                                <a href="#myModal2" data-toggle="modal"><button ng-click='view.addComments(view.gmrId,view.currentGameId,comments); view.setTime(view.gmrId,view.currentGameId) 'class="btn btn-default">Add</button></a>
                             </div>
                         </form>
                     </div>

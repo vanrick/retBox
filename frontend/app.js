@@ -3,7 +3,7 @@ var app = angular.module("retBox", ['ngRoute']);
 
 app.config(function($routeProvider, $locationProvider) {
     $routeProvider
-      .when('/', {
+      .when('/home', {
         templateUrl: 'views/home.html',
         controller: 'HomeController'
       })
@@ -35,9 +35,10 @@ app.config(function($routeProvider, $locationProvider) {
         templateUrl: 'views/playIt.html',
         controller: 'PlayController'
       })
-      .otherwise('/', {
-        templateUrl: 'views/home.html',
-        controller: 'HomeController'
-      })
+      // .otherwise('/', {
+      //   templateUrl: 'views/login.html',
+      //   controller: 'LoginController'
+      // })
+      .otherwise({     redirectTo: '/login'});
       $locationProvider.html5Mode(true)
 });

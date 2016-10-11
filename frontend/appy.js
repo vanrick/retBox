@@ -26,8 +26,27 @@ $('[type*="radio"]').change(function () {
   log.html(me.attr('value'));
 });
 
-$("#myModal2").modal("show").on("shown", function () {
-    window.setTimeout(function () {
-        $("#myModal2").modal("hide");
-    }, 5000);
+// $("#myModal2").modal("show").on("shown", function () {
+//     window.setTimeout(function () {
+//         $("#myModal2").modal("hide");
+//     }, 5000);
+// });
+
+function updateScroll(){
+    var element = document.getElementById("action");
+    element.scrollTop = element.scrollHeight;
+}
+
+setInterval("updateScroll",1000);
+
+var scrolled = false;
+function updateScroll(){
+    if(!scrolled){
+        var element = document.getElementById("action");
+        element.scrollTop = element.scrollHeight;
+    }
+}
+
+$("#action").on('scroll', function(){
+    scrolled=true;
 });
