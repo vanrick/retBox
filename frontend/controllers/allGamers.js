@@ -35,5 +35,5 @@ console.log('logged in user: ', loggedInUser.data.rows[0]);
      // $scope.view.showAllComm = {}
    })
  }
- 
+
 })
