@@ -32,8 +32,8 @@ app.config(function($routeProvider, $locationProvider) {
         controller: 'NavController'
       })
       .when('/play', {
-        templateUrl: 'views/playIt.html',
-        controller: 'PlayController'
+        templateUrl: 'views/play.html'
+        // controller: 'PlayController'
       })
       // .otherwise('/', {
       //   templateUrl: 'views/login.html',

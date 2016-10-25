@@ -4,4 +4,10 @@ app.controller('NavController', function($scope, $http, $route, $routeParams, Ga
  $scope.view.callAllG = function(){
    GamesFactory.gamesAll()
  }
+
+ $scope.view.playIt = function(){
+  console.log('PlayController HITT!!!');
+  GamesFactory.playTime()
+ }
+ 
 })

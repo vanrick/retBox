@@ -45,7 +45,9 @@ module.exports = {
   destroyGamerInLikes: function(id){
    return knex.raw(`DELETE from likes WHERE gamer_id=${id}`)
   },
-
+  // playIt: function(){
+  //
+  // }
  //   updateGym: function(id, pokemon){
  //   return knex.raw(`UPDATE pokemon set in_gym=${pokemon} WHERE id = ${id}`)
  // },

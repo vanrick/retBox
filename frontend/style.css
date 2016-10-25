@@ -668,5 +668,11 @@ div.horizontal {
 {
     background: #273041;
 }
+
+.play{
+  height: 100vh;
+  width: auto;
+  background-color: #011027;
+}
 /*end horizontal scroll*/
 /*--------------all games end---------------*/

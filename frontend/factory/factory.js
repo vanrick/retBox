@@ -156,7 +156,7 @@ app.factory('GamesFactory', function ($routeParams, $http) {
           comments: comments
         }
         return $http.post(`http://localhost:3000/gamers/addComments`,json).then(function(data){
-           console.log('adding comments to table factory: ',data);
+          //  console.log('adding comments to table factory: ',data);
         })
       },
       showAllComments:function(gmrId, gmId){
@@ -165,7 +165,7 @@ app.factory('GamesFactory', function ($routeParams, $http) {
           game_id: gmId
         }
         return $http.post(`http://localhost:3000/gamers/showAllComments`,json).then(function(data){
-          console.log('show all comments in factory: ', data);
+          // console.log('show all comments in factory: ', data);
           return data
         })
       },
@@ -190,20 +190,27 @@ app.factory('GamesFactory', function ($routeParams, $http) {
             games_id: games_id
             }
          return $http.post(`http://localhost:3000/gamers/removeUserGames`,json).then(function(data){
-               console.log('factory removeToUser: ',data);
+              //  console.log('factory removeToUser: ',data);
               //  return data
             })
       },
       removeGames: function(tea){
         var index = this.inventory.indexOf(tea)
         this.inventory.splice(index, 1)
-        console.log('inventory: ',this.inventory);
+        // console.log('inventory: ',this.inventory);
       },
       allGamesForUser: function(gamer_id){
         var json={
           gamer_id: gamer_id
         }
         return $http.post(`http://localhost:3000/gamers/allGamesForUser`,json).then(function(data){
+          return data
+        })
+      },
+      playTime: function(){
+        return $http.post(`http://localhost:3000/games/playIt`).then(function(data){
+          console.log('Hittt!!');
+          console.log(data);
           return data
         })
       },
