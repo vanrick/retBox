@@ -6,8 +6,7 @@ app.controller('NavController', function($scope, $http, $route, $routeParams, Ga
  }
 
  $scope.view.playIt = function(){
-  console.log('PlayController HITT!!!');
   GamesFactory.playTime()
  }
- 
+
 })

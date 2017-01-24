@@ -37,7 +37,6 @@ $scope.down = function(post){
   post.votes--
 }
 $scope.view.showAllComments = function(gmrId, gmId){
-  console.log('got em in IndGamersController: ', gmrId, gmId);
   GamesFactory.showAllComments(gmrId, gmId).then(function(data){
     $scope.view.currentGameId = gmId
     // console.log(data);

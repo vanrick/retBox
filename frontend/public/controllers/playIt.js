@@ -2,7 +2,6 @@ app.controller('PlayController', function($scope, $http, $route, $routeParams, G
 $scope.view={}
 
 $scope.view.playIt = function(){
-  console.log('PlayController HITT!!!');
  GamesFactory.playTime()
 }
 

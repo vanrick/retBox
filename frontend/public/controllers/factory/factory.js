@@ -11,7 +11,7 @@ app.factory('GamesFactory', function ($routeParams, $http) {
     	      gamer_icon: gi,
     	      gamer_quote: gq
           }
-          return $http.post('http://localhost:3000/gamers/createAcc',json).then(function(data){
+          return $http.post('https://retbox.herokuapp.com/gamers/createAcc',json).then(function(data){
 
             if(data.data == false ){
               return true
@@ -40,7 +40,7 @@ app.factory('GamesFactory', function ($routeParams, $http) {
           	gamer_tag: gt,
             gamer_pw: gpw
         }
-        return $http.post('http://localhost:3000/gamers/login',json).then(function(data){
+        return $http.post('https://retbox.herokuapp.com/gamers/login',json).then(function(data){
 
           if(data.data == 'PW matches'){
             return true
@@ -53,7 +53,7 @@ app.factory('GamesFactory', function ($routeParams, $http) {
       },
        findOne: function(gt){
         var name = {gamer_tag: gt}
-          return $http.post(`http://localhost:3000/gamers/id`,name).then(function(data){
+          return $http.post(`https://retbox.herokuapp.com/gamers/id`,name).then(function(data){
             oneUser = data
 
              return data
@@ -63,12 +63,12 @@ app.factory('GamesFactory', function ($routeParams, $http) {
          var json={
              id: gamer_id
              }
-          return $http.post(`http://localhost:3000/gamers/delete`,json).then(function(data){
+          return $http.post(`https://retbox.herokuapp.com/gamers/delete`,json).then(function(data){
                 return data
              })
        },
         gamesAll: function(){
-         return $http.post(`http://localhost:3000/games`).then(function(data){
+         return $http.post(`https://retbox.herokuapp.com/games`).then(function(data){
             allG = data.data
             return data
          })
@@ -78,7 +78,7 @@ app.factory('GamesFactory', function ($routeParams, $http) {
               gamer_id: gamer_id,
               games_id: games_id
               }
-           return $http.post(`http://localhost:3000/gamers/userGames`,json).then(function(data){
+           return $http.post(`https://retbox.herokuapp.com/userGames`,json).then(function(data){
                  return data
               })
         },
@@ -105,7 +105,7 @@ app.factory('GamesFactory', function ($routeParams, $http) {
           game_id: gmId,
           ratings: rtg
         }
-         return $http.post(`http://localhost:3000/games/gameRtg`,json).then(function(data){
+         return $http.post(`https://retbox.herokuapp.com/games/gameRtg`,json).then(function(data){
            return data
          })
       },
@@ -113,7 +113,7 @@ app.factory('GamesFactory', function ($routeParams, $http) {
         var json={
           gamer_id: gmrId
         }
-         return $http.post(`http://localhost:3000/games/defaultRtg`,json).then(function(data){
+         return $http.post(`https://retbox.herokuapp.com/games/defaultRtg`,json).then(function(data){
            return data
          })
       },
@@ -155,7 +155,7 @@ app.factory('GamesFactory', function ($routeParams, $http) {
           game_id: gmId,
           comments: comments
         }
-        return $http.post(`http://localhost:3000/gamers/addComments`,json).then(function(data){
+        return $http.post(`https://retbox.herokuapp.com/gamers/addComments`,json).then(function(data){
           //  console.log('adding comments to table factory: ',data);
         })
       },
@@ -164,7 +164,7 @@ app.factory('GamesFactory', function ($routeParams, $http) {
           gamer_id: gmrId,
           game_id: gmId
         }
-        return $http.post(`http://localhost:3000/gamers/showAllComments`,json).then(function(data){
+        return $http.post(`https://retbox.herokuapp.com/gamers/showAllComments`,json).then(function(data){
           // console.log('show all comments in factory: ', data);
           return data
         })
@@ -179,7 +179,7 @@ app.factory('GamesFactory', function ($routeParams, $http) {
             gamer_id: gamer_id,
             games_id: games_id
             }
-         return $http.post(`http://localhost:3000/gamers/userGames`,json).then(function(data){
+         return $http.post(`https://retbox.herokuapp.com/gamers/userGames`,json).then(function(data){
               //  console.log('factory addToUser: ',data);
               //  return data
             })
@@ -189,7 +189,7 @@ app.factory('GamesFactory', function ($routeParams, $http) {
             gamer_id: gamer_id,
             games_id: games_id
             }
-         return $http.post(`http://localhost:3000/gamers/removeUserGames`,json).then(function(data){
+         return $http.post(`https://retbox.herokuapp.com/gamers/removeUserGames`,json).then(function(data){
               //  console.log('factory removeToUser: ',data);
               //  return data
             })
@@ -203,14 +203,12 @@ app.factory('GamesFactory', function ($routeParams, $http) {
         var json={
           gamer_id: gamer_id
         }
-        return $http.post(`http://localhost:3000/gamers/allGamesForUser`,json).then(function(data){
+        return $http.post(`https://retbox.herokuapp.com/gamers/allGamesForUser`,json).then(function(data){
           return data
         })
       },
       playTime: function(){
-        return $http.post(`http://localhost:3000/games/playIt`).then(function(data){
-          console.log('Hittt!!');
-          console.log(data);
+        return $http.post(`https://retbox.herokuapp.com/games/playIt`).then(function(data){
           return data
         })
       },

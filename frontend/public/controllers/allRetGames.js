@@ -4,12 +4,10 @@ app.controller('AllGamesController', function($scope, $http, $route, $routeParam
 
 
  $scope.didSelectLanguage = function() {
-  return $http.post('http://localhost:3000/games').success(function(data){
-      console.log('allGamescontroller: ',data.rows);
+  return $http.post('https://retbox.herokuapp.com/games').success(function(data){
       var nin =[]
       var sup =[]
       var sixty =[]
-      console.log('nin: ',sup);
       for (var i = 0; i < data.rows.length; i++) {
         if (data.rows[i].console == 'NES') {
           nin.push(data.rows[i])
@@ -39,11 +37,9 @@ var oneUseriD = GamesFactory.getOneObj()
 
 $scope.view.userId = oneUseriD.data.rows[0].id
 $scope.view.addGamerGames = function(gId, gmId){
-  console.log('addallGames: ', gId, gmId);
   GamesFactory.addGamesToTable(gId,gmId)
 }
 $scope.view.removeGamerGames = function(gId, gmId){
-  console.log('removeallGames: ', gId, gmId);
   GamesFactory.removeGamesFromTable(gId,gmId)
 }
 var inventory = GamesFactory.inventory

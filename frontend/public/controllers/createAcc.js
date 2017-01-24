@@ -4,7 +4,6 @@ app.controller('CreateAccController', function($scope, $http, $route, $routePara
   $scope.isSelected = function(selected){
     // console.log('something');
     return $scope.selected == selected
-    console.log($scope.isSelected);
   }
 
   $scope.view.showMe = function(input){
@@ -14,7 +13,6 @@ app.controller('CreateAccController', function($scope, $http, $route, $routePara
   }
   $scope.view.getJson = function(gt, gpw, gi, gq){
     GamesFactory.createAcc(gt, gpw, gi, gq).then(function(value){
-      console.log('if existed ',value)
       if (value == false) {
         $scope.existed = true
       }else{

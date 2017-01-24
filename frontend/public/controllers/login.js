@@ -4,13 +4,11 @@ app.controller('LoginController', function($scope, $http, $route, $routeParams, 
   // console.log('login controller: test1 ', GamesFactory.oneLogin);
   $scope.view.login = function(gt, gpw){
     GamesFactory.accLogin(gt, gpw).then(function(data){
-      console.log('login data: ',data );
       if ($scope.gt == null || $scope.gpw == null) {
         $scope.blank_gt = true
         $scope.pw_not_found = false
         $scope.not_found = false
       }else if(data == true){
-        console.log('true! login');
         $location.path("/home");
       }else if(data == false){
         $scope.blank_gt = false
@@ -18,7 +16,6 @@ app.controller('LoginController', function($scope, $http, $route, $routeParams, 
         $scope.not_found = false
       }else{
         $scope.not_found = true
-       console.log('not found')
       }
     })
 
